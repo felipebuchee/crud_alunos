@@ -28,6 +28,12 @@ Listagem de alunos
     <?php foreach ($lista as $aluno) : ?>
         <tr>
             <td><?= $aluno->getId() ?></td>
+            <td><?= $aluno->getNome() ?></td>
+            <td><?= $aluno->getIdade() ?></td>
+            <td><?= $aluno->getEstrangeiro() ? 'Sim' : 'Não' ?></td>
+            <td><?= $aluno->getCurso()->getId() ?></td>
+            <td></td>
+            <td></td>
         </tr>
     <?php endforeach; ?>
 </table>

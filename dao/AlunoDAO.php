@@ -31,7 +31,9 @@ class AlunoDAO{
             
             $curso = new Curso();
             $curso->setId($r["id"]);
-            $curso->setNome($r["nome"]);
+            //$curso->setNome($r["nome"]);
+            $aluno->setCurso($curso);
+
 
             array_push($alunos, $aluno);
         }

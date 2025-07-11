@@ -74,6 +74,18 @@ class Aluno {
         return $this->estrangeiro;
     }
 
+    public function isEstrangeiro() : string {
+        if ($this->estrangeiro === 'S') {
+            return 'Sim';
+        } elseif ($this->estrangeiro === 'N') {
+            return 'Não';
+        }
+
+        else{
+            return 'Indefinido';
+        }
+    }
+
     /**
      * Set the value of estrangeiro
      */
