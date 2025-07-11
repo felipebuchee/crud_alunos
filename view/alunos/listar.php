@@ -25,7 +25,14 @@ Listagem de alunos
         <th></th>
     </tr>
 
+    <?php foreach ($lista as $aluno) : ?>
+        <tr>
+            <td><?= $aluno->getId() ?></td>
+        </tr>
+    <?php endforeach; ?>
 </table>
+
+
 
 <?php
     include_once __DIR__ . '/../include/footer.php';

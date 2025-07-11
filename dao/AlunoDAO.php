@@ -35,5 +35,6 @@ class AlunoDAO{
 
             array_push($alunos, $aluno);
         }
+        return $alunos;
     }
 }
