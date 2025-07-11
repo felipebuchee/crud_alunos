@@ -12,7 +12,10 @@ class AlunoDAO{
     }
     
     public function listar(){
-        $sql = "SELECT * FROM alunos";
+        $sql = "SELECT a.*,
+            c.nome nome_curso, c.turno turno_curso
+            FROM alunos a
+                JOIN cursos c ON a.curso_id = c.id";
         $stm = $this->conexao->prepare($sql);
         $stm->execute();
         $result = $stm->fetchAll();
