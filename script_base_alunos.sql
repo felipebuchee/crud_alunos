@@ -2,6 +2,9 @@
 Modelo de base de dados inicial para a implementação do CRUD Alunos
 */
 
+CREATE DATABASE IF NOT EXISTS crud_alunos;
+USE crud_alunos;
+
 /* TABELA cursos */
 CREATE TABLE cursos ( 
   id int AUTO_INCREMENT NOT NULL, 
