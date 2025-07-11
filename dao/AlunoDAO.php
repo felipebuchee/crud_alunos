@@ -1,6 +1,7 @@
 <?php 
 
 require_once(__DIR__ . "/../util/Connection.php");
+require_once(__DIR__ . "/../model/Aluno.php");
 
 class AlunoDAO{
 
@@ -16,6 +17,23 @@ class AlunoDAO{
         $stm->execute();
         $result = $stm->fetchAll();
 
-        return $result;
+        return $this->map($result);
+    }
+
+    private function map(array $result){
+        $alunos = [];
+        foreach($result as $r){
+            $aluno = new Aluno();
+            $aluno->setId($r["id"]);
+            $aluno->setNome($r["nome"]);
+            $aluno->setIdade($r["idade"]);
+            $aluno->setEstrangeiro($r["estrangeiro"]);
+            
+            $curso = new Curso();
+            $curso->setId($r["id"]);
+            $curso->setNome($r["nome"]);
+
+            array_push($alunos, $aluno);
+        }
     }
 }
