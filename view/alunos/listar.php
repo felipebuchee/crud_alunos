@@ -6,7 +6,7 @@
 
     $lista = $alunoCont->listar();
 
-    print_r($lista);
+    //print_r($lista);
 
     include_once __DIR__ . '/../include/header.php';
 ?>
